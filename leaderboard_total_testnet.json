@@ -1,6 +1,6 @@
 {
   "network": "testnet",
-  "updated_at": "2026-01-15T08:59:28.917331+00:00",
+  "updated_at": "2026-01-15T09:52:10.253761+00:00",
   "rows": [
     {
       "rank": 1,
@@ -172,18 +172,6 @@
     },
     {
       "rank": 15,
-      "public_key_short": "020390c5\u20264c5002",
-      "total_cspr": "10956.106020846",
-      "liquid_cspr": "954.508494902",
-      "staked_cspr": "10001.597525944",
-      "public_key": "020390c5e65c481a4cf9b9c7dec8b0b4fc0336764b4b0342ec30eee3a14d454c5002",
-      "cspr_live_url": "https://testnet.cspr.live/account/020390c5e65c481a4cf9b9c7dec8b0b4fc0336764b4b0342ec30eee3a14d454c5002",
-      "total_motes": "10956106020846",
-      "liquid_motes": "954508494902",
-      "staked_motes": "10001597525944"
-    },
-    {
-      "rank": 16,
       "public_key_short": "0202aae2\u202624df37",
       "total_cspr": "5003.883560579",
       "liquid_cspr": "3.235472010",
@@ -193,6 +181,18 @@
       "total_motes": "5003883560579",
       "liquid_motes": "3235472010",
       "staked_motes": "5000648088569"
+    },
+    {
+      "rank": 16,
+      "public_key_short": "020390c5\u20264c5002",
+      "total_cspr": "257.630737248",
+      "liquid_cspr": "257.630737248",
+      "staked_cspr": "0.000000000",
+      "public_key": "020390c5e65c481a4cf9b9c7dec8b0b4fc0336764b4b0342ec30eee3a14d454c5002",
+      "cspr_live_url": "https://testnet.cspr.live/account/020390c5e65c481a4cf9b9c7dec8b0b4fc0336764b4b0342ec30eee3a14d454c5002",
+      "total_motes": "257630737248",
+      "liquid_motes": "257630737248",
+      "staked_motes": "0"
     },
     {
       "rank": 17,
