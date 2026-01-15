@@ -1,36 +1,51 @@
-name: Update leaderboard (testnet)
+name: Update Casper Testnet Leaderboard
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"  # every 6 hours (UTC)
+    - cron: "*/5 * * * *" # every 5 minutes
+
+permissions:
+  contents: write
 
 jobs:
-  run:
+  update:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
-      - name: Setup Python
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install deps
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run generator
+      - name: Run leaderboard updater
         env:
           CSPR_CLOUD_KEY: ${{ secrets.CSPR_CLOUD_KEY }}
         run: |
-          python3 scripts/leaderboard_total_testnet.py
+          python scripts/leaderboard_total_testnet.py
 
-      - name: Commit & push if changed
+      - name: Commit & push updated leaderboard files
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "dorito-cm"
+          git config user.email "dorito-cm@users.noreply.github.com"
+
           git add leaderboard_total_testnet.json leaderboard_total_testnet.csv
-          git diff --staged --quiet || (git commit -m "Auto-update leaderboard" && git push)
+
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update leaderboard data (auto)"
+          git push origin main
