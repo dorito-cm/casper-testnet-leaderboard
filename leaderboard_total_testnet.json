@@ -1,6 +1,6 @@
 {
   "network": "testnet",
-  "updated_at": "2026-09-05T09:22:04.778403+00:00",
+  "updated_at": "2026-09-05T12:53:32.609121+00:00",
   "rows": [],
   "errors": [
     {
@@ -45,7 +45,7 @@
     },
     {
       "public_key": "0202136ca02036fa4a7a56b06e36c27aebca1650f8c6677dbd1874872320c6a35215",
-      "error": "401 Client Error: Unauthorized for url: https://api.testnet.cspr.cloud/accounts/0202136ca02036fa4a7a56b06e36c27aebca1650f8c6677dbd1874872320c6a35215"
+      "error": "500 Server Error: Internal Server Error for url: https://api.testnet.cspr.cloud/accounts/0202136ca02036fa4a7a56b06e36c27aebca1650f8c6677dbd1874872320c6a35215"
     },
     {
       "public_key": "020313f83a81035413c49c10bf875fcfedcdb08328ff85f69c14c1d6ccb4d0c670db",
